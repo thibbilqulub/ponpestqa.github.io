@@ -5428,14 +5428,15 @@ jQuery.Event.prototype = {
 		}
 
 		// If preventDefault exists, run it on the original event
-		if ( e.preventDefault ) {
-			e.preventDefault();
+		// if ( e.preventDefault ) {
+		// 	e.preventDefault();
+			
 
-		// Support: IE
-		// Otherwise set the returnValue property of the original event to false
-		} else {
-			e.returnValue = false;
-		}
+		// // Support: IE
+		// // Otherwise set the returnValue property of the original event to false
+		// } else {
+		// 	e.returnValue = false;
+		// }
 	},
 	stopPropagation: function() {
 		var e = this.originalEvent;
