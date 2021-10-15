@@ -496,6 +496,7 @@ header
   transition: all 0.3s ease 0s;
 }
 .header-area .main-nav .logo img {
+  height: 35px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -742,15 +743,15 @@ header
 .header-area .main-nav .header-buttons li .btn-nav-primary {
   padding-left: 25px;
   padding-right: 25px;
-  border: 1px solid #FFFFFF;
+  /* border: 1px solid #FFFFFF; */
   border-radius: 100px 0px 100px 100px;
   display: inline-block;
   height: 30px;
   margin-top: 5px;
   line-height: 29px;
   letter-spacing: 0.5px;
-  background: #fff;
-  color: #002d59;
+  background: linear-gradient(-135deg, #002d58 0%, #229a94 100%);
+  color: #ffffff;
   position: relative;
   overflow: hidden;
   margin-left: 15px;
