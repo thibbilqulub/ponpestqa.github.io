@@ -2511,9 +2511,39 @@ header.header-fixed {
   }
 }
 header.header-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 146px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.9s;
   border-bottom: none;
   background: #2bb573;
+  z-index: 100000;
 }
+
+header.sticky {
+  top: -20px;
+  height: 86px;
+  transition-duration: 1000ms;
+  transition-property: all;
+  transition-timing-function: ease-in;
+  
+  
+}
+/* header.sticky .prayer-time .prayer-time-btn {
+  bottom: 10px;
+  transition: all ease 0.3s;
+} */
+header.sticky.header-3 .logo a img {
+  height: 40px;
+  top: 10px;
+  transition-duration: 1000ms;
+}
+
 @media (max-width: 1199px) {
   header.header-3 {
     background-color: #fff;
@@ -2536,9 +2566,12 @@ header.header-3.header-fixed .header-top {
 }
 header.header-3 .logo a img {
   width: 100%;
+  height: 60px;
+  transition-duration: 1000ms;
+  transition-property: height;
 }
 @media (max-width: 991px) {
-  header.header-3 .header-top-area .social-icons,
+header.header-3 .header-top-area .social-icons,
 header.header-3 .header-top-area .left {
     border-color: #e5e5e547;
   }
@@ -2560,11 +2593,22 @@ header.header-3 .header-top-area .left li:first-child {
 }
 header.header-3 .header-bottom {
   background: #8dc63f;
+  width: 869px;
+}
+header.sticky.header-3 .header-bottom {
+  width: 996px;
+  transition-duration: 1000ms;
+  transition-property: all;
+  transition-timing-function: ease-in;  
 }
 @media (min-width: 1200px) {
   header.header-3 .header-bottom {
     margin: 0 0 30px;
     padding: 3px;
+    width: 869px;
+    transition-duration: 1000ms;
+    transition-property: all;
+    transition-timing-function: ease-in;
   }
 }
 header.header-3.header-fixed .header-bottom {
@@ -2921,7 +2965,7 @@ header.header-3 .header-top {
   line-height: 3.75;
   padding: 0 16px;
   text-transform: uppercase;
-  transform: translate(-10px, 10px);
+  /* transform: translate(-10px, 10px); */
 }
 @media (max-width: 1199px) {
   .prayer-time .prayer-time-btn {
