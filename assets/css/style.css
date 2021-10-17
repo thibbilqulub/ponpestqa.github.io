@@ -3632,6 +3632,12 @@ header.header-3 .header-top {
     top: 50px;
 }
 
+@media (max-width: 1036px) {
+    .about-section {
+        overflow: hidden;
+    }
+}
+
 .about-section .lab-item .lab-inner .lab-thumb .img-grp {
     position: relative;
     background-image: url(../images/about/01.png);
