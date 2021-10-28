@@ -1,16 +1,16 @@
-(function ($) {
+(function($) {
     "use strict";
-    $(window).on('load', function () {
+    $(window).on('load', function() {
         $('.preloader').fadeOut(1000);
     })
 
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         //=======================
 
         //sticky menu
         var fixed_top = $(".header-area");
-        $(window).on('scroll', function () {
+        $(window).on('scroll', function() {
             if ($(this).scrollTop() > 100) {
                 fixed_top.addClass("animated fadeInDown menu-fixed");
             } else {
@@ -20,7 +20,7 @@
         //Menu Dropdown Icon Adding
         $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
         // drop down menu width overflow problem fix
-        $('ul').parent('li').hover(function () {
+        $('ul').parent('li').hover(function() {
             var menu = $(this).find("ul");
             var menupos = $(menu).offset();
             if (menupos.left + menu.width() > $(window).width()) {
@@ -30,7 +30,7 @@
                 });
             }
         });
-        $('.menu li a').on('click', function (e) {
+        $('.menu li a').on('click', function(e) {
             var element = $(this).parent('li');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -45,7 +45,7 @@
                 element.siblings('li').find('ul').slideUp(300, "swing");
             }
         })
-        $('.ellepsis-bar').on('click', function (e) {
+        $('.ellepsis-bar').on('click', function(e) {
             var element = $('.header-top');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -58,7 +58,7 @@
 
             }
         });
-        $('.header-bar').on('click', function () {
+        $('.header-bar').on('click', function() {
             $(this).toggleClass('active');
             $('.overlay').toggleClass('active');
             $('.menu').toggleClass('active');
@@ -74,13 +74,13 @@
         $('a[data-rel^=lightcase]').lightcase();
 
         // search cart option
-        $(document).on('click', '.cart-option', function () {
+        $(document).on('click', '.cart-option', function() {
             $(".cart-option").toggleClass("open");
         });
-        $(document).on('click', '.search-option, .search-close', function () {
+        $(document).on('click', '.search-option, .search-close', function() {
             $(".search-input").toggleClass("open");
         });
-        $(document).on('click', '.navbar-toggler-icon', function () {
+        $(document).on('click', '.navbar-toggler-icon', function() {
             $(".top-header").toggleClass("open");
         });
 
@@ -89,7 +89,7 @@
         $(".shop-menu>li .shop-submenu").parent("li").children("a").addClass("dd-icon-down");
 
         // drop down menu width overflow problem fix
-        $('ul').parent().on('hover', function () {
+        $('ul').parent().on('hover', function() {
             var menu = $(this).find("ul");
             var menupos = $(menu).offset();
             if (menupos.left + menu.width() > $(window).width()) {
@@ -101,15 +101,15 @@
         });
 
         // mobile menu responsive
-        $(document).on('click', '.header-bar', function () {
+        $(document).on('click', '.header-bar', function() {
             $(".header-bar").toggleClass("close");
             $(".mobile-menu").toggleClass("open");
         });
 
         // scroll up start here
-        $(function () {
+        $(function() {
             //Check to see if the window is top if not then display button
-            $(window).scroll(function () {
+            $(window).scroll(function() {
                 if ($(this).scrollTop() > 300) {
                     $('.scrollToTop').css({
                         'bottom': '2%',
@@ -125,7 +125,7 @@
                 }
             });
             //Click event to scroll to top
-            $('.scrollToTop').on('click', function () {
+            $('.scrollToTop').on('click', function() {
                 $('html, body').animate({
                     scrollTop: 0
                 }, 500);
@@ -136,15 +136,15 @@
 
 
         //program donate money active class
-        $(".pay-price").on('click', function () {
+        $(".pay-price").on('click', function() {
             $(this).addClass('active').siblings().removeClass('active');
         });
 
 
-        
+
         //Isotope
-        
-        jQuery(window).on('load',function() { 
+
+        jQuery(window).on('load', function() {
             var $grid = $('.grid').isotope({
                 itemSelector: '.grid-item',
                 masonry: {
@@ -153,16 +153,16 @@
             })
 
             // filter items on button click
-            $('.filter-button-group').on('click', '.filter-btn', function () {
+            $('.filter-button-group').on('click', '.filter-btn', function() {
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({
                     filter: filterValue
                 });
             });
 
-            $('.filter-button-group').each(function (i, buttonGroup) {
+            $('.filter-button-group').each(function(i, buttonGroup) {
                 var $buttonGroup = $(buttonGroup);
-                $buttonGroup.on('click', '.filter-btn', function () {
+                $buttonGroup.on('click', '.filter-btn', function() {
                     $buttonGroup.find('.is-checked').removeClass('is-checked');
                     $(this).addClass('is-checked');
                 });
@@ -251,13 +251,13 @@
         });
 
         // counterup js start here
-        $('.count-number').each(function () {
+        $('.count-number').each(function() {
             var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
                 duration: 8000,
-                step: function (func) {
+                step: function(func) {
                     $(this).text(parseFloat(func).toFixed(size));
                 }
             });
@@ -265,8 +265,8 @@
 
         //Progress-bar 
 
-        $(function () {
-            $('.progress-bar-wrapper').each(function () {
+        $(function() {
+            $('.progress-bar-wrapper').each(function() {
                 $(this).find('.progress-bar').animate({
                     width: $(this).attr('data-percent')
                 }, 6000);
@@ -274,8 +274,8 @@
         });
 
         // product view mode change js
-        $(function () {
-            $('.product-view-mode').on('click', 'a', function (e) {
+        $(function() {
+            $('.product-view-mode').on('click', 'a', function(e) {
                 e.preventDefault();
                 var shopProductWrap = $('.shop-product-wrap');
                 var viewMode = $(this).data('target');
@@ -289,7 +289,7 @@
         var CartPlusMinus = $('.cart-plus-minus');
         CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
         CartPlusMinus.append('<div class="inc qtybutton">+</div>');
-        $(".qtybutton").on("click", function () {
+        $(".qtybutton").on("click", function() {
             var $button = $(this);
             var oldValue = $button.parent().find("input").val();
             if ($button.text() === "+") {
@@ -338,7 +338,7 @@
         });
 
         //Review Tabs
-        $('ul.review-nav').on('click', 'li', function (e) {
+        $('ul.review-nav').on('click', 'li', function(e) {
             e.preventDefault();
             var reviewContent = $('.review-content');
             var viewRev = $(this).data('target');
@@ -348,7 +348,7 @@
         });
     });
     //progressbar
-    window.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('DOMContentLoaded', function() {
         const circle = new CircularProgressBar('pie');
         setInterval(() => {
             const options = {
@@ -359,8 +359,8 @@
         }, 2000);
 
     });
-    
-    
+
+
     //Countdown js initialization
     document.addEventListener('readystatechange', event => {
         if (event.target.readyState === "complete") {
@@ -376,7 +376,7 @@
                 countDownDate[i]['minutes'] = 0;
             }
 
-            var countdownfunction = setInterval(function () {
+            var countdownfunction = setInterval(function() {
                 for (var i = 0; i < countDownDate.length; i++) {
                     var now = new Date().getTime();
                     var distance = countDownDate[i]['time'] - now;
@@ -402,6 +402,9 @@
     });
 }(jQuery));
 
-
-
-
+// <script>
+//     </script>
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+})

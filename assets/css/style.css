@@ -2703,8 +2703,8 @@ header.header-3 .header-top {
 /*About section css start here*/
 
 .about-section {
-    /* overflow: hidden; */
-    top: 50px;
+    overflow: hidden;
+    /* top: 50px; */
 }
 
 .about-section .lab-item .lab-inner .lab-thumb .img-grp {
@@ -5375,7 +5375,7 @@ footer .footer-bottom .footer-bottom-content p a {
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(135deg, #f0f0f0 0%, #ddf1d4 100%);
     border-radius: 30px 0px 30px 30px;
-    margin-top: -100px;
+    margin-top: -125px;
     padding: 15px;
 }
 
@@ -5497,6 +5497,13 @@ footer .footer-bottom .footer-bottom-content p a {
     .account-wrapper {
         padding: 40px 15px;
     }
+    header.sticky {
+        height: 54px !important;
+        top: 0px !important;
+    }
+    header.header-3 {
+        height: 75px;
+    }
 }
 
 @media screen and (min-width: 550px) {
@@ -5510,6 +5517,9 @@ footer .footer-bottom .footer-bottom-content p a {
 }
 
 @media (max-width: 575px) {
+    .col-sm-6 {
+        width: 100%;
+    }
     .feature-item {
         margin: 0 auto 40px;
         text-align: center;
@@ -5728,6 +5738,11 @@ footer .footer-bottom .footer-bottom-content p a {
 }
 
 @media (min-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 940px;
+    }
     .coming-wrapper h1 {
         font-size: 55px;
     }
@@ -6238,15 +6253,8 @@ footer .footer-bottom .footer-bottom-content p a {
         background-color: #fff;
     }
     header.sticky {
-        height: 175px;
-        top: -116px;
-    }
-    header.sticky.header-3 .header-bottom {
-        left: -127px;
-        width: 1189px;
-        transition-duration: 1000ms;
-        transition-property: all;
-        transition-timing-function: ease-in;
+        height: 70px;
+        top: 0px;
     }
     header.header-3 .logo {
         text-align: center;
@@ -6275,6 +6283,29 @@ footer .footer-bottom .footer-bottom-content p a {
 @media (max-width: 1199px) and (min-width: 992px) {
     .header-wrapper .logo {
         width: 200px;
+    }
+    header.header-3 .header-top {
+        left: 0%;
+        width: 100%;
+    }
+    header.header-3 .header-bottom {
+        width: 100%;
+    }
+    header.sticky {
+        top: -105px;
+    }
+    header.sticky.header-3 .header-bottom {
+        left: 0px;
+        width: 100%;
+        transition-duration: 1000ms;
+        transition-property: all;
+        transition-timing-function: ease-in;
+    }
+    header.header-3 .logo a img {
+        left: 0px;
+    }
+    header.header-3 {
+        height: 154px;
     }
 }
 
@@ -6457,6 +6488,7 @@ footer .footer-bottom .footer-bottom-content p a {
     .about-section .lab-item .lab-inner .lab-thumb .img-grp .about-fg-img {
         right: 75px;
         top: -33px;
+        /* margin-top: 50px; */
     }
     .upcoming-programs {
         margin-top: -65px;
