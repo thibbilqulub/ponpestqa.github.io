@@ -6309,12 +6309,6 @@ footer .footer-bottom .footer-bottom-content p a {
     }
 }
 
-@media (max-width: 1200px) {
-    .about-section {
-        overflow: hidden;
-    }
-}
-
 @media (min-width: 1200px) {
     .container {
         max-width: 1190px;
@@ -6451,7 +6445,7 @@ footer .footer-bottom .footer-bottom-content p a {
     }
     header::before {
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 76% 0%);
-        background-color: #fff;
+        /* background-color: #fff; */
         content: "";
         width: 330px;
         height: 100%;
@@ -6531,19 +6525,25 @@ footer .footer-bottom .footer-bottom-content p a {
     }
 }
 
+@media (max-width: 1200px) {
+    .about-section {
+        overflow: hidden;
+    }
+}
+
 @media (min-width: 1440px) {
     .aside-bg:after {
         width: 39%;
     }
     header::before {
         width: 26%;
-        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 78% 0%);
+        /* clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 78% 0%); */
         transition-duration: 1000ms;
         transition-property: all;
         transition-timing-function: ease-in;
     }
     header.sticky::before {
-        width: 19%;
+        width: 22%;
         transition-duration: 1000ms;
         transition-property: all;
         transition-timing-function: ease-in;
@@ -6559,8 +6559,8 @@ footer .footer-bottom .footer-bottom-content p a {
 
 @media (min-width: 1600px) {
     header::before {
-        width: 39%;
-        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 87% 0%);
+        width: 28%;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 85% 0%);
     }
 }
 
