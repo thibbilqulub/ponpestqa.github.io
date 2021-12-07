@@ -5375,7 +5375,7 @@ footer .footer-bottom .footer-bottom-content p a {
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(135deg, #f0f0f0 0%, #ddf1d4 100%);
     border-radius: 30px 0px 30px 30px;
-    margin-top: -125px;
+    margin-top: -50px;
     padding: 15px;
 }
 
@@ -5465,7 +5465,7 @@ footer .footer-bottom .footer-bottom-content p a {
     border-radius: 50px;
 }
 
-.oute:hover span:nth-child(1) {
+.outer:hover span:nth-child(1) {
     filter: blur(7px);
 }
 
