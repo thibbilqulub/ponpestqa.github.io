@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<script language="javascript">
+// (c) Premshree Pillai
+// http://www.qiksearch.com
+// premshree@hotmail.com
+// Use freely as long as this message is intact.
+var msg = " Scrolling Title ";
+var pos = 0;
+var spacer = " ... ";
+var time_length = 100;
+function ScrollTitle()
+{
+ document.title = msg.substring(pos, msg.length) + spacer + msg.substring(0, pos);
+ pos++;
+ if (pos > msg.length) pos=0;
+ window.setTimeout("ScrollTitle()",time_length);
+}
+ScrollTitle();
+</script>
+<style type="text/css">
+.premshree{font-family:verdana,arial,helvetica; font-size:8pt; color:#003399; font-weight:normal; text-decoration:underline}
+.premshree:hover{font-family:verdana,arial,helvetica; font-size:8pt; color:#FA5D00; font-weight:normal; text-decoration:underline}
+.header{font-family:Times New Roman,arial,verdana,helvetica; font-size:25pt; color:#DD0000; font-weight:bold; font-style:italic}
+</style>
+<title>Scrolling Title</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center><span class="header">Scrolling Title</span></center>
+<br>
+<table align="center" width="400"><tr><td>
+<font face="verdana,arial,helvetica" size="-1" color="#000000">
+This script scrolls the title.<br>
+
+Paste the following script in the <font face="courier">&lt;HEAD&gt;</font> section of your page. Change the variable <font face="courier">msg</font> to your web page title. Change the scroll speed by changing the value of the variable <font face="courier">time_length</font>. Here it is 100, which means that each character will change it's position after 100 milliseconds, i.e a scroll speed of 10 pixels/second.
+<p style="background:#FFFFE7; padding:3; font-family:courier">
+&lt;script language="javascript"&gt;<br>
+// (c) Premshree Pillai<br>
+// http://www.qiksearch.com<br>
+// premshree@hotmail.com<br>
+
+// Use freely as long as this message is intact.<br>
+var msg = " Your Web Page Title ";<br>
+var pos = 0;<br>
+var spacer = " ... ";<br>
+var time_length = 100;<br>
+function ScrollTitle()<br>
+{<br>
+ document.title = msg.substring(pos, msg.length) + spacer + msg.substring(0, pos);<br>
+
+ pos++;<br>
+ if (pos > msg.length) pos=0;<br>
+ window.setTimeout("ScrollTitle()",time_length);<br>
+}<br>
+ScrollTitle();<br>
+&lt;/script&gt;
+</p>
+<center><a href="mailto:premshree@hotmail.com" class="premshree">&#169 Premshree Pillai</a></center>
+
+</font>
+</td></tr></table>
+
+</body>
+</html>
+
+           
+       
